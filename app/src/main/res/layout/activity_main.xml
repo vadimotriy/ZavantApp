@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity"
+    android:background="@color/background">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="0.2"
+        android:src="@drawable/img" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/button"
+        android:layout_gravity="center"
+
+        android:layout_weight="0.1"
+        android:text="@string/btn_start" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2" />
+
+    <!-- Нижнее меню -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:menu="@menu/bottom_menu"
+        android:layout_weight="0.05"
+        app:itemTextColor="@color/black"
+        app:itemIconTint="@color/black"
+        app:itemActiveIndicatorStyle="@color/white"
+        android:background="@drawable/bottomnavigation"
+        />
+
+
+</LinearLayout>

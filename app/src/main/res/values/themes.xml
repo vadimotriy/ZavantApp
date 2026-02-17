@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.IKAR_2026" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:navigationBarColor">@color/background_nav</item>
+    </style>
+
+    <style name="Theme.IKAR_2026" parent="Base.Theme.IKAR_2026" />
+</resources>

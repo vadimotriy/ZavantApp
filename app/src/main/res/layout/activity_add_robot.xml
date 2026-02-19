@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity"
+    android:background="@color/background">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="0.2"
+        android:src="@drawable/img" />
+
+
+    <EditText
+        android:id="@+id/carId"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Введите ID"
+        android:maxLines="1"
+        android:layout_gravity="center"
+        android:inputType="text"
+        android:background="@drawable/enter"
+        android:textColor="@color/very_dark_gray"
+        android:textColorHint="@color/dark_gray" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.02" />
+
+    <EditText
+        android:id="@+id/carPassword"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Введите пароль"
+        android:maxLines="1"
+        android:layout_gravity="center"
+        android:inputType="textPassword"
+        android:background="@drawable/enter"
+        android:textColor="@color/very_dark_gray"
+        android:textColorHint="@color/dark_gray" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.02" />
+
+    <EditText
+        android:id="@+id/carName"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Введите название"
+        android:maxLines="1"
+        android:layout_gravity="center"
+        android:inputType="text"
+        android:background="@drawable/enter"
+        android:textColor="@color/very_dark_gray"
+        android:textColorHint="@color/dark_gray" />
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2" />
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="300dp"
+        android:layout_height="15dp"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/button"
+        android:layout_gravity="center"
+
+        android:layout_weight="0.1"
+        android:text="@string/btn_start" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.02" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="300dp"
+        android:layout_height="15dp"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/button"
+        android:layout_gravity="center"
+
+        android:layout_weight="0.1"
+        android:text="Назад" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2" />
+
+    <!-- Нижнее меню -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:menu="@menu/bottom_menu"
+        android:layout_weight="0.05"
+        app:itemIconTint="@color/bottomnavigation_selector"
+        app:itemTextColor="@color/bottomnavigation_selector"
+        app:itemActiveIndicatorStyle="@color/white"
+        android:background="@drawable/bottomnavigation"
+        />
+
+
+
+</LinearLayout>

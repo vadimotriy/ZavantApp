@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">IKAR_2026</string>
     <string name="logo">ЗАВАНТ</string>
-    <string name="btn_start">Подключиться</string>
+    <string name="btn_start">Добавить устройство</string>
 </resources>

@@ -40,4 +40,7 @@ public class PrefManager {
     public void clearData() {
         prefs.edit().remove(KEY_DATA).apply();
     }
+    public void saveEmptyList() {
+        saveDataList(new ArrayList<>());
+    }
 }

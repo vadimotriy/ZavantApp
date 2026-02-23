@@ -14,6 +14,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.ikar_2026.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,6 +65,22 @@ public class MainActivity extends AppCompatActivity implements RemoteCarAdapter.
                 startActivityForResult(intent, 100); // 100 - requestCode, любое число
                 Log.i(LOG_TAG, "Открыт экран добавления робота");
             }
+        });
+
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
+        bottomNav.setOnItemSelectedListener(item -> {
+            int id = item.getItemId();
+            if (id == R.id.nav_home) {
+                return true;
+            } else if (id == R.id.nav_info) {
+                Intent intent = new Intent(getApplicationContext(), Information.class);
+                intent.putExtra("COUNT", dataList.size());
+                startActivity(intent);
+                overridePendingTransition(0, 0); // Убирает анимацию переключения
+                return true;
+            }
+            // ... другие страницы
+            return false;
         });
 
 

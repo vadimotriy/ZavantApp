@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity"
+    android:background="@color/background">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="0.3"
+        android:src="@drawable/img" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:textColor="@color/very_dark_gray"
+        android:textSize="30sp"
+        android:maxLines="1"
+
+        android:text="  Предприятие: ООО СНИЦ РЭС 'Завант'" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.02" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:textColor="@color/very_dark_gray"
+        android:textSize="30sp"
+        android:maxLines="1"
+
+        android:text="   Количество устройств: " />
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.10" />
+
+    <Button
+        android:id="@+id/button_clear"
+        android:layout_width="300dp"
+        android:layout_height="15dp"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/button"
+        android:layout_gravity="center"
+
+        android:layout_weight="0.08"
+        android:text="@string/btn_start" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.10" />
+
+    <!-- Нижнее меню -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:menu="@menu/bottom_menu"
+        android:layout_weight="0.05"
+        app:itemIconTint="@color/bottomnavigation_selector"
+        app:itemTextColor="@color/bottomnavigation_selector"
+        app:itemActiveIndicatorStyle="@color/white"
+        android:background="@drawable/bottomnavigation"
+        />
+
+
+</LinearLayout>

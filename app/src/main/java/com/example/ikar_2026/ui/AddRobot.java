@@ -15,6 +15,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.ikar_2026.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -90,6 +91,21 @@ public class AddRobot extends AppCompatActivity {
                 }
             }
         });
+
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
+        bottomNav.setOnItemSelectedListener(item -> {
+            int id = item.getItemId();
+            if (id == R.id.nav_home) {
+                return true;
+            } else if (id == R.id.nav_info) {
+                startActivity(new Intent(getApplicationContext(), Information.class));
+                overridePendingTransition(0, 0); // Убирает анимацию переключения
+                return true;
+            }
+            // ... другие страницы
+            return false;
+        });
+
     }
 
     public static boolean isInteger(String str) {
